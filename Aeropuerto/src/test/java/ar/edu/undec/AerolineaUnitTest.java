@@ -13,6 +13,19 @@ public class AerolineaUnitTest {
 		assertEquals(01,aerolinea1.getIdAerolinea().intValue());
 		assertEquals("Rosario", aerolinea1.getNombre());
 		
+		
+		
+	}
+	
+	@Test
+	public void instanciarAerolinea_TodosLosAtributos_Incorrectos() {
+		Aerolinea aerolinea1 = new Aerolinea(01,"Rosario"); 
+		
+		assertNotEquals(02,aerolinea1.getIdAerolinea().intValue());
+		assertNotEquals("Cordoba", aerolinea1.getNombre());
+		
+		
+		
 	}
 
 }
