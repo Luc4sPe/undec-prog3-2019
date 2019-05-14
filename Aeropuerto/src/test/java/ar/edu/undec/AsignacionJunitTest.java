@@ -7,7 +7,7 @@ import org.junit.Test;
 public class AsignacionJunitTest {
 
 	@Test
-	public void instanciarAsignacion_TodosLosAtributos_Correctos() {
+	public void instanciarAsignacion_TodosLosAtributos_Correctos() throws ExcepcionDatosIncorrectos {
 		Pasajero pasajero1 = new Pasajero(01, "27-23654678-0", "Peña", "Lucio,Daniel", "15454356");
 		Asiento asiento1 = new Asiento(05, "65");
 		Asignacion asignacion1= new Asignacion(pasajero1,asiento1,"004");
@@ -19,7 +19,7 @@ public class AsignacionJunitTest {
 		
 	}
 	@Test
-	public void instanciarAsignacion_TodosLosAtributos_Incorrectos() {
+	public void instanciarAsignacion_TodosLosAtributos_Incorrectos() throws ExcepcionDatosIncorrectos {
 		Pasajero pasajero1 = new Pasajero(01, "27-23654678-0", "Peña", "Lucio,Daniel", "15454356");
 		Pasajero pasajero2 = new Pasajero(04, "27-21654098-0", "Paez", "Leo,Jose", "15497565");
 		Asiento asiento1 = new Asiento(05, "65");

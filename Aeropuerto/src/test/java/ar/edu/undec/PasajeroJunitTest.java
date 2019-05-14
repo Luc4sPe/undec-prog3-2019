@@ -7,7 +7,7 @@ import org.junit.Test;
 public class PasajeroJunitTest {
 
 	@Test
-	public void instanciarPasejero_TodosLosAtributos_Correctos() {
+	public void instanciarPasejero_TodosLosAtributos_Correctos() throws ExcepcionDatosIncorrectos {
 		Pasajero pasajero1 = new Pasajero(01,"27-32654678-0","Pozo","Mauricio,Jorge","15411458");
 		
 		assertEquals(01, pasajero1.getIdPasajero().intValue());
@@ -19,7 +19,7 @@ public class PasajeroJunitTest {
 				
 	}
 	@Test
-	public void instanciarPasejero_TodosLosAtributos_Incorrectos() {
+	public void instanciarPasejero_TodosLosAtributos_Incorrectos() throws ExcepcionDatosIncorrectos {
 		Pasajero pasajero1 = new Pasajero(01,"27-32654678-0","Pozo","Mauricio,Jorge","15411458");
 		
 		assertNotEquals(07, pasajero1.getIdPasajero().intValue());

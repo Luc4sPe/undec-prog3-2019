@@ -7,13 +7,27 @@ public class Pasajero {
 	private String apellido;
 	private String nombres;
 	private String telefono;
-	public Pasajero(Integer idPasajero, String cuil, String apellido, String nombres, String telefono) {
+	
+	public Pasajero(Integer idPasajero, String cuil, String apellido, String nombres, String telefono) throws ExcepcionDatosIncorrectos {
 		
-		this.idPasajero = idPasajero;
-		this.cuil = cuil;
-		this.apellido = apellido;
-		this.nombres = nombres;
-		this.telefono = telefono;
+		if(cuil.isEmpty()) {
+			
+			throw new ExcepcionDatosIncorrectos("El campo (CUIL) no puede estar vacio");
+			
+		}else if(cuil.length() < 11 || cuil.length() > 14){
+			
+			throw new ExcepcionDatosIncorrectos(" CUIL Incorrecto");
+			
+		}else {
+			this.idPasajero = idPasajero;
+			this.cuil = cuil;
+			this.apellido = apellido;
+			this.nombres = nombres;
+			this.telefono = telefono;
+		}
+	}
+	public Pasajero() {
+		
 	}
 	public Integer getIdPasajero() {
 		return idPasajero;

@@ -12,7 +12,7 @@ import org.junit.Test;
 public class VueloJunitTest {
 
 	@Test
-	public void intasnciarVuelosTodosLosAtributosCorrectos() {
+	public void intasnciarVuelosTodosLosAtributosCorrectos() throws ExcepcionDatosIncorrectos {
 		
 		Ciudad ciudadSalida = new Ciudad(1, "Cordoba", "5437");
 		Aeropuerto salidaAeropuerto =new Aeropuerto(1, "AeropuertoInternacionalEzeiza", ciudadSalida, "003");
@@ -68,7 +68,7 @@ public class VueloJunitTest {
 	}
 	
 	@Test
-	public void intasnciarVuelosTodosLosAtributos_Incorrectos() {
+	public void intasnciarVuelosTodosLosAtributos_Incorrectos() throws ExcepcionDatosIncorrectos {
 		
 		Ciudad ciudadSalida = new Ciudad(1, "Cordoba", "5437");
 		Ciudad ciudadSalida1 = new Ciudad(3, "San Luis", "6543");
