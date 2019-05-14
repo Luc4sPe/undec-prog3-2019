@@ -12,6 +12,7 @@ public class CiudadJunitTest {
 		
 		assertEquals(01, ciudad1.getIdCiudad().intValue());
 		assertEquals("Cordoba", ciudad1.getNombre());
+		assertEquals("5437", ciudad1.getCodigoPostal());
 	}
 	@Test
 	public void instanciarCiudad_TodosLosAtributos_Incorrecto() {
@@ -19,5 +20,6 @@ public class CiudadJunitTest {
 		
 		assertNotEquals(03, ciudad1.getIdCiudad().intValue());
 		assertNotEquals("Rioja", ciudad1.getNombre());
+		assertNotEquals("5373", ciudad1.getCodigoPostal());
 	}
 }
