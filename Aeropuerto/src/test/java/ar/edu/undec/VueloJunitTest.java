@@ -33,8 +33,8 @@ public class VueloJunitTest {
 		
 		// se crea la asignacion
 		List<Asignacion> pasajero = new ArrayList<Asignacion>();
-		Pasajero pasajero1 = new Pasajero(1, "20-33.345.567-0", "Barboza", "Luis", "15654734");
-		Pasajero pasajero2 = new Pasajero(2, "20-40.398.123-0", "Codocea", "Carlos", "15415458");
+		Pasajero pasajero1 = new Pasajero(1, "20-33345567-0", "Barboza", "Luis", "15654734");
+		Pasajero pasajero2 = new Pasajero(2, "20-40398123-0", "Codocea", "Carlos", "15415458");
 		Asiento asiento1 =new Asiento(1, "34");
 		Asiento asiento2 = new Asiento(2, "35");
 		
@@ -104,20 +104,20 @@ public class VueloJunitTest {
 		// se crea la asignacion
 		List<Asignacion> pasajero = new ArrayList<Asignacion>();
 		List<Asignacion> pasajeros1 = new ArrayList<Asignacion>();
-		Pasajero pasajero1 = new Pasajero(1, "20-33.345.567-0", "Barboza", "Luis", "15654734");
-		Pasajero pasajero2 = new Pasajero(2, "20-40.398.123-0", "Codocea", "Carlos", "15415458");
-		Pasajero pasajero3 = new Pasajero(4, "20-32.323.321-0", "Valdiviezo", "Ivan", "15436798");
-		Pasajero pasajero4 = new Pasajero(3, "20-35.987.456-0", "Reyna", "David", "15215355");
+		Pasajero pasajero1 = new Pasajero(1, "20-33345567-0", "Barboza", "Luis", "15654734");
+		Pasajero pasajero2 = new Pasajero(2, "20-40398123-0", "Codocea", "Carlos", "15415458");
+		Pasajero pasajero3 = new Pasajero(4, "20-32323321-0", "Valdiviezo", "Ivan", "15436798");
+		Pasajero pasajero4 = new Pasajero(3, "20-35987456-0", "Reyna", "David", "15215355");
 		Asiento asiento1 =new Asiento(1, "34");
 		Asiento asiento2 = new Asiento(2, "35");
 		Asiento asiento3 = new Asiento(5, "45");
 		Asiento asiento4 = new Asiento(6, "05");
 		
-		Asignacion asignacion1 =new Asignacion(pasajero1, asiento1, "001");
+		//Asignacion asignacion1 =new Asignacion(pasajero1, asiento1, "001");
 		Asignacion asignacion2 = new Asignacion(pasajero2, asiento2, "005");
 		Asignacion asignacion3 = new Asignacion(pasajero3, asiento3, "050");
 		Asignacion asignacion4 = new Asignacion(pasajero4, asiento4, "014");
-		pasajero.add(asignacion1);
+		//pasajero.add(asignacion1);
 		pasajero.add(asignacion2);
 		pasajeros1.add(asignacion3);
 		pasajeros1.add(asignacion4);
