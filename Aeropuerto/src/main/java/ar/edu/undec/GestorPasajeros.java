@@ -61,6 +61,8 @@ public class GestorPasajeros {
 			}
 		return pasajeros.remove(eliminar);		
 	}
+	
+	
 	public boolean modificarPasajero(String cuil, String nombres, String telefono) {
 		if(existenciaPasajero(cuil)) {
 			int i = 0;

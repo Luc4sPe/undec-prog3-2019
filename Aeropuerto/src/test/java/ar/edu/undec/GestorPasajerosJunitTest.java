@@ -47,21 +47,21 @@ public class GestorPasajerosJunitTest {
 	@Test
 	public void eliminarPasajero_PasajeroExistente_CuilCorrecto() throws ExcepcionDatosIncorrectos {
 
-		//Consulta en la lista si un pasajero existe a travez de su cuil, y lo elimina de la lista
+		//Consulta en la lista si un pasajero existe a travez del cuil, y lo elimina de la lista
 		assertTrue(gestorPasajeros.registrarPasajero("20-32458305-0", "Vega", "Jose Nicolas", "3825416602"));
 		assertTrue(gestorPasajeros.borrarPasajero("20-32458305-0"));
 	}
 	
 	@Test
 	public void eliminarPasajero_PasajeroExistente_CuilIncorrecto() throws ExcepcionDatosIncorrectos {
-		//Consulta en la lista si un pasajero existe a travez de su cuil, y devuelve false al no encontrarlo
+		//Consulta en la lista si un pasajero existe a travez de su cuil, devuelve false si no lo encontra
 		assertTrue(gestorPasajeros.registrarPasajero("20-32458305-0", "Vega", "Jose Nicolas", "3825416602"));
 		assertFalse(gestorPasajeros.borrarPasajero("28-23302555-7"));
 	}
 	
 	@Test
 	public void ModificarPasajero_NombreTelefono_CuilCorrecto() throws ExcepcionDatosIncorrectos{
-		//Consulta en la lista la existencia de un pasajero y modifica sus campos de nombre y telefono cuando existe, atra ves del cuil
+		//Consulta en la lista un pasajero y modifica sus campos de nombre y telefono, atra ves del cuil
 		assertTrue(gestorPasajeros.registrarPasajero("20-32458305-0", "Vega", "Jose Nicolas", "3825416602"));
 		assertTrue(gestorPasajeros.modificarPasajero("20-32458305-0", "Kevin Manuel", "+5493825434455"));
 	}

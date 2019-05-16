@@ -8,14 +8,27 @@ public class Ciudad {
 	private String nombre;
 	private String codigoPostal;
 	
-	public Ciudad(Integer idCiudad, String nombre, String codigoPostal) {
+	public Ciudad(Integer idCiudad, String nombre, String codigoPostal) throws ExcepcionDatosIncorrectos {
+		
+		if(nombre.isEmpty()) {
+			
+			throw new ExcepcionDatosIncorrectos("El campo (nombre) no puede estar vacio");
+			
+		}else if(codigoPostal.isEmpty()){
+			
+			throw new ExcepcionDatosIncorrectos("El campo (CodigoPostal) no puede estar vacio");
+			
+		}else {
 		
 		this.idCiudad = idCiudad;
 		this.nombre = nombre;
 		this.codigoPostal = codigoPostal;
+		}
 	}
 	
-	
+	public Ciudad() {
+		
+	}
 	
 	public Integer getIdCiudad() {
 		return idCiudad;

@@ -7,7 +7,7 @@ import org.junit.Test;
 public class CiudadJunitTest {
 
 	@Test
-	public void instanciarCiudad_TodosLosAtributos_Correctos() {
+	public void instanciarCiudad_TodosLosAtributos_Correctos() throws ExcepcionDatosIncorrectos {
 		Ciudad ciudad1=new Ciudad(01,"Cordoba","5437");
 		
 		assertEquals(01, ciudad1.getIdCiudad().intValue());
@@ -15,7 +15,7 @@ public class CiudadJunitTest {
 		assertEquals("5437", ciudad1.getCodigoPostal());
 	}
 	@Test
-	public void instanciarCiudad_TodosLosAtributos_Incorrecto() {
+	public void instanciarCiudad_TodosLosAtributos_Incorrecto() throws ExcepcionDatosIncorrectos {
 		Ciudad ciudad1=new Ciudad(01,"Cordoba","5437");
 		
 		assertNotEquals(03, ciudad1.getIdCiudad().intValue());

@@ -7,7 +7,7 @@ import org.junit.Test;
 public class AeropuertoJunitTest {
 
 	@Test
-	public void instanciarAeropuerto_TodosLosAtributos_Correctos() {
+	public void instanciarAeropuerto_TodosLosAtributos_Correctos() throws ExcepcionDatosIncorrectos {
 		Ciudad ciudad1 = new Ciudad(01, "cordoba", "5437");
 		Aeropuerto aeropuerto1 = new Aeropuerto(01,"aerolineas",ciudad1,"001");		
 		assertEquals(01, aeropuerto1.getIdAeropuerto().intValue());
@@ -17,7 +17,7 @@ public class AeropuertoJunitTest {
 	}
 	
 	@Test
-	public void instanciarAeropuerto_TodosLosAtributos_Incorrectos() {
+	public void instanciarAeropuerto_TodosLosAtributos_Incorrectos() throws ExcepcionDatosIncorrectos {
 		Ciudad ciudad1 = new Ciudad(01, "cordoba", "5437");
 		Ciudad ciudad2 = new Ciudad(02, "rioja", "5459");
 		Aeropuerto aeropuerto1 = new Aeropuerto(01,"aerolineas",ciudad1,"001");		

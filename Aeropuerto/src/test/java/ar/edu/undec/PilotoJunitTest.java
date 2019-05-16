@@ -9,7 +9,7 @@ import org.junit.Test;
 public class PilotoJunitTest {
 
 	@Test
-	public void instanciarPilotoTodo_losAtibutos_correctos() {
+	public void instanciarPilotoTodo_losAtibutos_correctos() throws ExcepcionDatosIncorrectos {
 		LocalDate fechaNacimiento = LocalDate.of(1986, 05, 13);
 		Piloto nuevo =new Piloto(01,"Perez","Julian","34.456.678", fechaNacimiento);
 	
@@ -23,7 +23,7 @@ public class PilotoJunitTest {
 		
 	}
 	@Test
-	public void instanciarPilotoTodo_losAtibutos_Incorrectos() {
+	public void instanciarPilotoTodo_losAtibutos_Incorrectos() throws ExcepcionDatosIncorrectos {
 		LocalDate fechaNacimiento = LocalDate.of(1986, 05, 13);
 		LocalDate fechaNaciemiento1 = LocalDate.of(1987, 03, 03);
 		Piloto nuevo =new Piloto(01,"Perez","Julian","34.456.678", fechaNacimiento);

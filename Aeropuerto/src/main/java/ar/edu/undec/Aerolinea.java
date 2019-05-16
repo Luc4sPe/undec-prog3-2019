@@ -5,6 +5,9 @@ public class Aerolinea {
 	private String nombre;
 	
 	public Aerolinea(Integer idAerolinea, String nombre) {
+		
+		
+		
 		this.idAerolinea = idAerolinea;
 		this.nombre = nombre;
 	}
