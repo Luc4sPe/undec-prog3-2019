@@ -24,12 +24,12 @@ class VehiculoUnitTest {
 		assertNotNull(elVehiculo);		
 	}
 	
-	@Test
-	void mostrarVehiculo_formatoEspecifico_muestraFormateado() throws VehiculoIncompletoException {
-		Vehiculo elVehiculo = Vehiculo.factoryVehiculo(1, "VW Golf", "ABC123", 2009);
-		String formatoSalida=elVehiculo.mostrarVehiculo();
+	//@Test
+	//void mostrarVehiculo_formatoEspecifico_muestraFormateado() throws VehiculoIncompletoException {
+		//Vehiculo elVehiculo = Vehiculo.factoryVehiculo(1, "VW Golf", "ABC123", 2009);
+		//String formatoSalida=elVehiculo.mostrarVehiculo();
 		
-		assertEquals("VW Golf modelo 2009 - Patente ABC123", formatoSalida);
-	}
+		//assertEquals("VW Golf modelo 2009 - Patente ABC123", formatoSalida);
+	//}
 
 }
