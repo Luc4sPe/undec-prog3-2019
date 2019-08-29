@@ -2,9 +2,12 @@ package modelo;
 
 
 import java.time.LocalDate;
+import java.time.Period;
+import java.util.ArrayList;
 import java.util.List;
 
 import excepciones.ClienteIncompletoException;
+import excepciones.ClienteMenorDeEdadException;
 
 public class Cliente {
 	private Integer idCliente;
@@ -22,8 +25,8 @@ public class Cliente {
 	
 
 	public Cliente(Integer idCliente, String apellido, String nombre, String documento, LocalDate fechaNacimientoDate,
-			String domicilio, String telefono, List<Vehiculo> vehiculos) {
-		super();
+			String domicilio, String telefono) {
+		
 		this.idCliente = idCliente;
 		this.apellido = apellido;
 		this.nombre = nombre;
@@ -31,17 +34,24 @@ public class Cliente {
 		this.fechaNacimientoDate = fechaNacimientoDate;
 		this.domicilio = domicilio;
 		this.telefono = telefono;
-		this.vehiculos = vehiculos;
+		this.vehiculos = new ArrayList<Vehiculo>();
+		 
 	}
 
 
 	public static Cliente factoryCliente(Integer idCliente, String apellido, String nombre, String documento, LocalDate fechaNacimiento,
-			String domicilio, String telefono) throws ClienteIncompletoException{
+			String domicilio, String telefono) throws ClienteIncompletoException, ClienteMenorDeEdadException{
 		if( idCliente ==null||apellido==null||nombre==null||documento==null||fechaNacimiento==null||domicilio==null||telefono==null) {
 			throw new ClienteIncompletoException();
+		}else if (Period.between(fechaNacimiento, LocalDate.now()).getYears()>=18){
+			return new Cliente(idCliente, apellido, nombre, documento, fechaNacimiento, domicilio, telefono);
+		}else {
+			throw new ClienteMenorDeEdadException();
 		}
-		return new Cliente(idCliente, apellido, nombre, documento, fechaNacimientoDate, domicilio, telefono, vehiculos)
 	}
+			
+		 
+	
 
 
 	public Integer getIdCliente() {
@@ -114,14 +124,25 @@ public class Cliente {
 	}
 
 
-	public List<Vehiculo> getVehiculos() {
+	public void asignarVehiculo(Vehiculo elVehiculo) {
+		this.vehiculos.add(elVehiculo);
+		
+	}
+	  
+
+
+	public List<Vehiculo> devolverVehiculos() {
+		
 		return vehiculos;
 	}
 
 
-	public void setVehiculos(List<Vehiculo> vehiculos) {
-		this.vehiculos = vehiculos;
-	}
+	
+
+	    
+
+
+	
 
 
 

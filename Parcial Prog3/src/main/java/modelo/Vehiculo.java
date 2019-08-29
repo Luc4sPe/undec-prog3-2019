@@ -11,7 +11,7 @@ public class Vehiculo {
 	
 	
 
-	public Vehiculo(Integer idVehiculo, String marcaModeloString, String patente, Integer anio) {
+	public Vehiculo(Integer idVehiculo, String marcaModelo, String patente, Integer anio) {
 		
 		this.idVehiculo = idVehiculo;
 		this.marcaModelo = marcaModelo;
@@ -35,6 +35,67 @@ public class Vehiculo {
 	
 
 
+
+	public Integer getIdVehiculo() {
+		return idVehiculo;
+	}
+
+
+
+	public void setIdVehiculo(Integer idVehiculo) {
+		this.idVehiculo = idVehiculo;
+	}
+
+
+
+	public String getMarcaModelo() {
+		return marcaModelo;
+	}
+
+
+
+	public void setMarcaModelo(String marcaModelo) {
+		this.marcaModelo = marcaModelo;
+	}
+
+
+
+	public String getPatente() {
+		return patente;
+	}
+
+
+
+	public void setPatente(String patente) {
+		this.patente = patente;
+	}
+
+
+
+	public Integer getAnio() {
+		return anio;
+	}
+
+
+
+	public void setAnio(Integer anio) {
+		this.anio = anio;
+	}
+
+
+
+	public String mostrarVehiculo() {
+		
+		return this.marcaModelo + " modelo " + this.anio + " - Patente " + this.patente;
+	}
+
+	 
+	}
+
+
 	
 
-}
+
+	
+
+
