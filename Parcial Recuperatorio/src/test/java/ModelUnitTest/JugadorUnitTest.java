@@ -1,5 +1,6 @@
 package ModelUnitTest;
 
+import Exceptions.JugadorIncompletoException;
 import Model.Jugador;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -17,7 +18,7 @@ public class JugadorUnitTest {
     }
 
     @Test
-    public void factoryJugador_JugadorIncompleto_JugadorIncompletoException(){
+    public void factoryJugador_JugadorIncompleto_JugadorIncompletoException() throws JugadorIncompletoException{
         Assertions.assertThrows(JugadorIncompletoException.class, () -> Jugador.instancia(null,null,null, 0.0, null));
 
     }

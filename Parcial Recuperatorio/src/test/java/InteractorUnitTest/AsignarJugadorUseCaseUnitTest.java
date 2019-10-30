@@ -1,9 +1,13 @@
 package InteractorUnitTest;
 
+import Exceptions.EquipoIncompletoException;
+import Exceptions.JugadorAsignadoException;
+import Exceptions.JugadorIncompletoException;
 import Interactor.AsignarJugadorUseCase;
 import Mockito.MockitoExtension;
 import Model.Equipo;
 import Model.Jugador;
+import Repositorio.IRepositorioAsignarJugador;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -13,6 +17,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 @ExtendWith(MockitoExtension.class)
+
 public class AsignarJugadorUseCaseUnitTest {
 
     @Mock

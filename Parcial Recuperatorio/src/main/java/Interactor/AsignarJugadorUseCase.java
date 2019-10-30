@@ -1,7 +1,9 @@
 package Interactor;
 
+import Exceptions.JugadorAsignadoException;
 import Model.Equipo;
 import Model.Jugador;
+import Repositorio.IRepositorioAsignarJugador;
 
 public class AsignarJugadorUseCase {
     private IRepositorioAsignarJugador iRepositorioAsignarJugador;
@@ -11,7 +13,10 @@ public class AsignarJugadorUseCase {
         this.iRepositorioAsignarJugador = iRepositorioAsignarJugador;
     }
 
+
+
     public boolean asignarJugador(Jugador elJugador, Equipo elEquipo) throws JugadorAsignadoException {
+
         if(elEquipo.asignarJugador(elJugador))
         {
             return true;
