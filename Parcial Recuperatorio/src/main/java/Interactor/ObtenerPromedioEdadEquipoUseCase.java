@@ -15,7 +15,6 @@ public class ObtenerPromedioEdadEquipoUseCase {
         return Math.round(this.iRepositorioObtenerEquipo.obtenerEquipoPorNombre(elEquipo.getNombre()).obtenerPromedioEdad()*100.0)/100.0;
 
     }
- public float obtenerPromedioEdad() {
-    }
+
 
 }

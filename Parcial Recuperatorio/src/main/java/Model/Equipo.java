@@ -31,10 +31,28 @@ public class Equipo {
     }
 
     public boolean asignarJugador(Jugador messi) {
+        //if(!jugadores.contains(messi)) return jugadores.add(messi);
+        //return false;
+        for(Jugador jugador: jugadores){
+            if(jugador.getDocumento().equals(messi.getDocumento())){
+                return false;
+            }
+        }
+        return this.jugadores.add(messi);
 
-        this.jugadores.add(messi);
-        return false;
     }
 
 
+    public double obtenerPromedioEdad() {
+        double promedio=0.0;
+        for(Jugador vari:jugadores){
+              promedio+=vari.getEdad();
+        }
+        return  promedio/this.jugadores.size();
+    }
+
+    public double obtenerPromedioAltura(){
+        double promedio=jugadores.stream().mapToDouble(Jugador::getEstatura).sum();
+        return promedio/jugadores.size();
+    }
 }
